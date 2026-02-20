@@ -4,7 +4,7 @@ import numpy as np
 import cv2
 IMG_SIZE = 128
 
-# Load model
+model = tf.keras.models.load_model("deepfake_model.keras")
 model = tf.keras.models.load_model("deepfake_model.h5")
 
 # Title
@@ -38,3 +38,4 @@ if uploaded_file is not None:
     else:
 
         st.success(f"REAL IMAGE ✅ (Confidence: {prediction:.2f})")
+
