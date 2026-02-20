@@ -64,4 +64,8 @@ model.fit(
 
 model.save("deepfake_model.h5")
 
+
 print("Model Saved Successfully")
+import tensorflow as tf
+model = tf.keras.models.load_model("deepfake_model.h5")
+model.save("deepfake_model.keras")
