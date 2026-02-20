@@ -2,7 +2,6 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 import cv2
-
 IMG_SIZE = 128
 
 # Load model
@@ -37,4 +36,5 @@ if uploaded_file is not None:
     if prediction > 0.5:
         st.error(f"FAKE IMAGE ❌ (Confidence: {prediction:.2f})")
     else:
+
         st.success(f"REAL IMAGE ✅ (Confidence: {prediction:.2f})")
